@@ -1,4 +1,5 @@
 require_relative 'config/environment'
+require_relative 'piglatinizer'
 
 class App < Sinatra::Base
   
@@ -7,6 +8,7 @@ class App < Sinatra::Base
   end 
   
   post '/result' do 
+    PigLatinizer.new.pigl
     erb :result
   end 
 end
